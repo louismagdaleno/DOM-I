@@ -45,3 +45,17 @@ let ctaImg = document.getElementById('cta-img').setAttribute('src',siteContent["
 
 // Update the img src for the main banner
 let middleImg = document.getElementById('middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// Nav - create array of nav children
+const navLinks = document.querySelectorAll('a');
+
+// Nav Links - set ID and text content for each nav link
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].setAttribute('id', 'nav-item-'+(i+1));
+  navLinks[i].textContent = siteContent['nav'][navLinks[i].getAttribute('id')];
+  console.log(navLinks[i]);
+}
+
+
+
+
