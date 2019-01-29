@@ -60,6 +60,37 @@ const ctaContent = Array.from(document.querySelector('.cta-text').children);
 
 ctaContent.forEach(element => element.textContent = siteContent['cta'][element.localName]);
 
+// Main Content
+const topContentChildren = document.querySelector('.top-content').children;
+
+
+
+
+
+// Contact
+const contact = document.querySelector('.contact');
+
+// get contact nodes
+let contact_h4 = contact.firstElementChild;
+let contact_address = contact_h4.nextElementSibling;
+let contact_phone = contact_address.nextElementSibling
+let contact_email = contact.lastElementChild;
+
+// setting ID's for children
+contact_h4.setAttribute('id', 'contact-h4')
+contact_address.setAttribute('id', 'address')
+contact_email.setAttribute('id', 'email')
+contact_phone.setAttribute('id', 'phone')
+
+// setting text content for children
+contact_h4.textContent = siteContent['contact'][contact_h4.id];
+contact_address.textContent = siteContent['contact'][contact_address.id];
+contact_email.textContent = siteContent['contact'][contact_email.id];
+contact_phone.textContent = siteContent['contact'][contact_phone.id];
+
+
+
+
 
 
 
