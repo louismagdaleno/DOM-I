@@ -53,8 +53,13 @@ const navLinks = document.querySelectorAll('a');
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].setAttribute('id', 'nav-item-'+(i+1));
   navLinks[i].textContent = siteContent['nav'][navLinks[i].getAttribute('id')];
-  console.log(navLinks[i]);
 }
+
+// Call to Action - obtain list of children, set textContent for each child
+const ctaContent = Array.from(document.querySelector('.cta-text').children);
+
+ctaContent.forEach(element => element.textContent = siteContent['cta'][element.localName]);
+
 
 
 
