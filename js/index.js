@@ -61,7 +61,35 @@ const ctaContent = Array.from(document.querySelector('.cta-text').children);
 ctaContent.forEach(element => element.textContent = siteContent['cta'][element.localName]);
 
 // Main Content
-const topContentChildren = document.querySelector('.top-content').children;
+
+// get main container
+const topContent = document.querySelector('.top-content');
+
+
+// get children of main container
+let topContent_features = topContent.firstElementChild;
+let topContent_about = topContent.lastElementChild;
+
+// set ID's for children of first child
+topContent_features.firstElementChild.setAttribute('id', 'features-h4');
+topContent_features.lastElementChild.setAttribute('id', 'features-content');
+
+// settext content for children of first child
+topContent_features.firstElementChild.textContent = siteContent['main-content'][topContent_features.firstElementChild.id];
+topContent_features.lastElementChild.textContent = siteContent['main-content'][topContent_features.lastElementChild.id];
+
+// set ID's for children of last child
+topContent_about.firstElementChild.setAttribute('id', 'about-h4');
+topContent_about.lastElementChild.setAttribute('id', 'about-content');
+
+// settext content for children of last child
+topContent_about.firstElementChild.textContent = siteContent['main-content'][topContent_about.firstElementChild.id];
+topContent_about.lastElementChild.textContent = siteContent['main-content'][topContent_about.lastElementChild.id];
+
+
+topContent_about.setAttribute('id', 'about');
+
+
 
 
 
