@@ -52,8 +52,24 @@ const navLinks = document.querySelectorAll('a');
 // Nav Links - set ID and text content for each nav link
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].setAttribute('id', 'nav-item-'+(i+1));
+  navLinks[i].style.color = 'green';
   navLinks[i].textContent = siteContent['nav'][navLinks[i].getAttribute('id')];
 }
+
+// Add more navlinks
+
+var a = document.createElement("a")
+var b = document.createElement("a")
+
+const nav = document.querySelector('nav');
+
+nav.prepend(b);
+nav.firstElementChild.textContent = 'Lambda';
+nav.firstElementChild.setAttribute('href', '#');
+
+nav.appendChild(a);
+nav.lastElementChild.textContent = 'School';
+nav.lastElementChild.setAttribute('href', '#');
 
 // Call to Action - obtain list of children, set textContent for each child
 const ctaContent = Array.from(document.querySelector('.cta-text').children);
