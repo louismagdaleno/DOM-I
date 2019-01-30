@@ -121,16 +121,6 @@ bottomContent_vision.lastElementChild.setAttribute('id', 'vision-content');
 bottomContent_vision.firstElementChild.textContent = siteContent['main-content'][bottomContent_vision.firstElementChild.id];
 bottomContent_vision.lastElementChild.textContent = siteContent['main-content'][bottomContent_vision.lastElementChild.id];
 
-
-
-
-
-
-
-
-
-
-
 // Contact
 const contact = document.querySelector('.contact');
 
@@ -152,6 +142,14 @@ contact_address.textContent = siteContent['contact'][contact_address.id];
 contact_email.textContent = siteContent['contact'][contact_email.id];
 contact_phone.textContent = siteContent['contact'][contact_phone.id];
 
+// Footer
+let footerCopyright = document.querySelector('footer').firstElementChild;
+
+// set ID for footer copyright
+footerCopyright.setAttribute('id', 'copyright');
+
+// set text content for copyright
+footerCopyright.textContent = siteContent['footer']['copyright'];
 
 
 
