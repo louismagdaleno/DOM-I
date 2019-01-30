@@ -62,11 +62,11 @@ ctaContent.forEach(element => element.textContent = siteContent['cta'][element.l
 
 // Main Content
 
-// get main container
+// get topContent container
 const topContent = document.querySelector('.top-content');
 
 
-// get children of main container
+// get children of topContent container
 let topContent_features = topContent.firstElementChild;
 let topContent_about = topContent.lastElementChild;
 
@@ -87,7 +87,43 @@ topContent_about.firstElementChild.textContent = siteContent['main-content'][top
 topContent_about.lastElementChild.textContent = siteContent['main-content'][topContent_about.lastElementChild.id];
 
 
-topContent_about.setAttribute('id', 'about');
+// get bottomContent container
+const bottomContent = document.querySelector('.bottom-content');
+
+
+// get children of bottomContent container
+let bottomContent_services = bottomContent.firstElementChild;
+let bottomContent_product = bottomContent_services.nextElementSibling;
+let bottomContent_vision = bottomContent.lastElementChild;
+
+// set ID's for children of first child
+bottomContent_services.firstElementChild.setAttribute('id', 'services-h4');
+bottomContent_services.lastElementChild.setAttribute('id', 'services-content');
+
+// set text content for children of first child
+bottomContent_services.firstElementChild.textContent = siteContent['main-content'][bottomContent_services.firstElementChild.id];
+bottomContent_services.lastElementChild.textContent = siteContent['main-content'][bottomContent_services.lastElementChild.id];
+
+// set ID's for children of middle child
+bottomContent_product.firstElementChild.setAttribute('id', 'product-h4');
+bottomContent_product.lastElementChild.setAttribute('id', 'product-content');
+
+// settext content for children of middle child
+bottomContent_product.firstElementChild.textContent = siteContent['main-content'][bottomContent_product.firstElementChild.id];
+bottomContent_product.lastElementChild.textContent = siteContent['main-content'][bottomContent_product.lastElementChild.id];
+
+
+// set ID's for children of last child
+bottomContent_vision.firstElementChild.setAttribute('id', 'vision-h4');
+bottomContent_vision.lastElementChild.setAttribute('id', 'vision-content');
+
+// settext content for children of last child
+bottomContent_vision.firstElementChild.textContent = siteContent['main-content'][bottomContent_vision.firstElementChild.id];
+bottomContent_vision.lastElementChild.textContent = siteContent['main-content'][bottomContent_vision.lastElementChild.id];
+
+
+
+
 
 
 
