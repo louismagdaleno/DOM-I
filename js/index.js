@@ -75,7 +75,8 @@ nav.lastElementChild.setAttribute('href', '#');
 const ctaContent = Array.from(document.querySelector('.cta-text').children);
 
 ctaContent.forEach(element => element.textContent = siteContent['cta'][element.localName]);
-
+let h1 = document.querySelector("h1");
+h1.innerHTML = siteContent.cta.h1.replace(new RegExp(" ", 'g'), '<br> ');
 // Main Content
 
 // get topContent container
